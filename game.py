@@ -62,15 +62,15 @@ class Game():
 
     def game_run_player_ai(self):
         while self.P1_current_score < 2 and self.P2_current_score < 2:
-            p1_choice = input("Player 1, choose your gesture (Rock, Paper, Scissors, Lizard, Spock): ")
+            p1_choice = input("Player 1, choose your gesture (1=Rock, 2=Paper, 3=Scissors, 4=Lizard, 5=Spock): ")
             p2_choice = self.P2.choose_gestures()
             if p1_choice == p2_choice:
                 print("Tie!")
-            elif (p1_choice == "Rock" and (p2_choice == "Scissors" or p2_choice == "Lizard")) or \
-                    (p1_choice == "Paper" and (p2_choice == "Rock" or p2_choice == "Spock")) or \
-                    (p1_choice == "Scissors" and (p2_choice == "Paper" or p2_choice == "Lizard")) or \
-                    (p1_choice == "Lizard" and (p2_choice == "Paper" or p2_choice == "Spock")) or \
-                    (p1_choice == "Spock" and (p2_choice == "Rock" or p2_choice == "Scissors")):
+            elif (p1_choice == "1" and (p2_choice == "Scissors" or p2_choice == "Lizard")) or \
+                    (p1_choice == "2" and (p2_choice == "Rock" or p2_choice == "Spock")) or \
+                    (p1_choice == "3" and (p2_choice == "Paper" or p2_choice == "Lizard")) or \
+                    (p1_choice == "4" and (p2_choice == "Paper" or p2_choice == "Spock")) or \
+                    (p1_choice == "5" and (p2_choice == "Rock" or p2_choice == "Scissors")):
                 self.P1.score_point()
                 self.P1_current_score += 1
                 print()
@@ -85,8 +85,8 @@ class Game():
 
     def game_run_player_player(self):
             while self.P1_current_score < 2 and self.P2_current_score < 2:
-                p1_choice = input("Player 1, choose your gesture (Rock, Paper, Scissors, Lizard, Spock): ")
-                p2_choice = input("Player 2, choose your gesture (Rock, Paper, Scissors, Lizard, Spock): ")
+                p1_choice = input("Player 1, choose your gesture (1=Rock, 2=Paper, 3=Scissors, 4=Lizard, 5=Spock): ")
+                p2_choice = input("Player 2, choose your gesture (1=Rock, 2=Paper, 3=Scissors, 4=Lizard, 5=Spock): ")
                 if p1_choice == p2_choice:
                     print("Tie!")
                 elif (p1_choice == "Rock" and (p2_choice == "Scissors" or p2_choice == "Lizard")) or \
