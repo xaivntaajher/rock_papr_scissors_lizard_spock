@@ -28,15 +28,15 @@ class Game():
         print("Each match will be best of three games. Use the numerator keys to enter your selection.")
         print()     
         print("Rock crushes Scissors")
-        print("Scissors cuts Paper")
-        print("Paper covers Rock")
         print("Rock crushes Lizard")
-        print("Lizard Poisons Spock")
-        print("Spock smashes Scissors")
+        print("Scissors cuts Paper")
         print("Scissors decapitates Lizard")
-        print("Lizard eats Paper")
-        print("paper disproves Spock")
+        print("Paper covers Rock")
+        print("Paper disproves Spock")
         print("Spock vaporizes Rock")
+        print("Spock smashes Scissors")
+        print("Lizard Poisons Spock")
+        print("Lizard eats Paper")
         print()
         
         self.start = input("How many players? 1, 2, or 3 for a surprise. ")
@@ -113,11 +113,11 @@ class Game():
                 p2_choice = self.P2.choose_gestures()
                 if p1_choice == p2_choice:
                     print("Tie!")
-                elif (p1_choice == "Rock" and (p2_choice == "Scissors" or p2_choice == "Lizard")) or \
-                    (p1_choice == "Paper" and (p2_choice == "Rock" or p2_choice == "Spock")) or \
-                    (p1_choice == "Scissors" and (p2_choice == "Paper" or p2_choice == "Lizard")) or \
-                    (p1_choice == "Lizard" and (p2_choice == "Paper" or p2_choice == "Spock")) or \
-                    (p1_choice == "Spock" and (p2_choice == "Rock" or p2_choice == "Scissors")):
+                elif (p1_choice == "1" and (p2_choice == "Scissors" or p2_choice == "Lizard")) or \
+                    (p1_choice == "2" and (p2_choice == "Rock" or p2_choice == "Spock")) or \
+                    (p1_choice == "3" and (p2_choice == "Paper" or p2_choice == "Lizard")) or \
+                    (p1_choice == "4" and (p2_choice == "Paper" or p2_choice == "Spock")) or \
+                    (p1_choice == "5" and (p2_choice == "Rock" or p2_choice == "Scissors")):
                     self.P1.score_point()
                     self.P1_current_score += 1
                     print("Player 1 wins this round!")
